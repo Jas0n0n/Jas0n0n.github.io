@@ -2,7 +2,7 @@
     <channel>
         <title>My New Hugo Site</title>
         <link>http://example.org/</link>
-        <description>This is my cool site</description>
+        <description>知行合一</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 08 Jul 2022 11:04:38 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
@@ -13,8 +13,8 @@
     <guid>http://example.org/posts/sun-1st-post/</guid>
     <description><![CDATA[Hello Hugo ​	My Name is Jason. I&rsquo;m a Coder,Nice to meet you!
 1. Hugo Basic ​	https://gohugo.io/getting-started/quick-start/
-$ hugo new site my_website $ cd my_website $ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt Local Run
-$ hugo new posts/first_post.md $ hugo new posts/first_post.md $ echo theme = \&#34;LoveIt\&#34; &gt;&gt; config.toml $ hugo serve -D $ hugo --theme=LoveIt --baseUrl=&#34;https://Jas0n0n.github.io/&#34; 2.Github Page https://pages.github.com/ Page e.g. https://Jas0n0n.github.io/ 3.First Commit $ hugo --destination ./docs --buildDrafts --cleanDestinationDir $ cd docs $ git init $ git remote add origin https://github.]]></description>
+$ hugo new site quickstart $ cd quickstart $ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt Local Run
+$ hugo new posts/first_post.md $ hugo new posts/first_post.md $ echo theme = \&#34;LoveIt\&#34; &gt;&gt; config.toml $ hugo serve -D $ hugo --theme=LoveIt --baseUrl=&#34;https://Jas0n0n.github.io/&#34; 2.Github Page https://pages.github.com/ Page e.g. https://Jas0n0n.github.io/ git clone https://github.com/Jas0n0n/Jas0n0n.github.io 3.First Commit $ hugo --destination .]]></description>
 </item>
 </channel>
 </rss>
