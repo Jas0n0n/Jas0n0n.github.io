@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>web - Tag - Sun Blog</title>
+        <link>http://example.org/tags/web/</link>
+        <description>web - Tag - Sun Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 08 Jul 2022 11:04:38 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>使用Hugo搭建GitHub静态站点</title>
+    <link>http://example.org/posts/sun-1st-post/</link>
+    <pubDate>Fri, 08 Jul 2022 11:04:38 &#43;0800</pubDate>
+    <author>Jason</author>
+    <guid>http://example.org/posts/sun-1st-post/</guid>
+    <description><![CDATA[Hello Hugo ​	My Name is Jason. I&rsquo;m a Coder,Nice to meet you!
+1. Hugo Basic ​	https://gohugo.io/getting-started/quick-start/
+$ hugo new site quickstart $ cd quickstart $ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt Local Run
+$ hugo new posts/first_post.md $ hugo new posts/first_post.md $ echo theme = \&#34;LoveIt\&#34; &gt;&gt; config.toml $ hugo serve -D $ hugo --theme=LoveIt --baseUrl=&#34;https://Jas0n0n.github.io/&#34; 2.Github Page https://pages.github.com/ Page e.g. https://Jas0n0n.github.io/ git clone https://github.com/Jas0n0n/Jas0n0n.github.io 3.First Commit $ hugo --destination .]]></description>
+</item>
+</channel>
+</rss>
