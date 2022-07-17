@@ -4,6 +4,14 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | Sun Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 08 Jul 2022 11:04:38 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>TcpScanner Using Golang</title>
+    <link>http://example.org/posts/sun-2d-tcpscanner/</link>
+    <pubDate>Fri, 08 Jul 2022 11:04:38 &#43;0800</pubDate>
+    <author>Jason</author>
+    <guid>http://example.org/posts/sun-2d-tcpscanner/</guid>
+    <description><![CDATA[1.0 基础版的非并发版扫描 package main import( &#34;fmt&#34; &#34;net&#34; ) func main(){ for i:=1;i&lt;=1024;i++{ address :=fmt.Sprintf(&#34;127.0.0.1:%d&#34;,i) conn,err:=net.Dial(&#34;tcp&#34;,address) if err!=nil{ //端口已关闭或过滤 continue } conn.Close() fmt.Printf(&#34;%d is open\n&#34;,i) } } 2.0 WaitGrop并发控制版扫描 package main import ( &#34;fmt&#34; &#34;net&#34; &#34;sync&#34; ) func main(){ var wg sync.WaitGroup for i:=0;i&lt;1024;i++{ wg.Add(1) go func(j int){ defer wg.Done address :=fmt.Sprintf(&#34;127.0.0.1:%d&#34;,j) conn,err :=net.Dial(&#34;tcp&#34;,address) if err !=nil{ return } }(i) } wg.Wait() } 3.0 多通道版端口扫描 package main import ( &#34;fmt&#34; &#34;net&#34; &#34;sort&#34; ) func worker(ports,results chan int){ for p:=range ports{ address :=fmt.]]></description>
+</item>
+<item>
     <title>使用Hugo搭建GitHub静态站点</title>
     <link>http://example.org/posts/sun-1st-post/</link>
     <pubDate>Fri, 08 Jul 2022 11:04:38 &#43;0800</pubDate>
@@ -13,14 +21,6 @@
 1. Hugo Basic ​	https://gohugo.io/getting-started/quick-start/
 $ hugo new site quickstart $ cd quickstart $ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt Local Run
 $ hugo new posts/first_post.md $ hugo new posts/first_post.md $ echo theme = \&#34;LoveIt\&#34; &gt;&gt; config.toml $ hugo serve -D $ hugo --theme=LoveIt --baseUrl=&#34;https://Jas0n0n.github.io/&#34; 2.Github Page https://pages.github.com/ Page e.g. https://Jas0n0n.github.io/ git clone https://github.com/Jas0n0n/Jas0n0n.github.io 3.First Commit $ hugo --destination .]]></description>
-</item>
-<item>
-    <title></title>
-    <link>http://example.org/posts/tcpscanner/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/posts/tcpscanner/</guid>
-    <description><![CDATA[TcpScanner Using Golang 1.0 基础版的非并发版扫描 package main import( &#34;fmt&#34; &#34;net&#34; ) func main(){ for i:=1;i&lt;=1024;i++{ address :=fmt.Sprintf(&#34;127.0.0.1:%d&#34;,i) conn,err:=net.Dial(&#34;tcp&#34;,address) if err!=nil{ //端口已关闭或过滤 continue } conn.Close() fmt.Printf(&#34;%d is open\n&#34;,i) } } 2.0 WaitGrop并发控制版扫描 package main import ( &#34;fmt&#34; &#34;net&#34; &#34;sync&#34; ) func main(){ var wg sync.WaitGroup for i:=0;i&lt;1024;i++{ wg.Add(1) go func(j int){ defer wg.Done address :=fmt.Sprintf(&#34;127.0.0.1:%d&#34;,j) conn,err :=net.Dial(&#34;tcp&#34;,address) if err !=nil{ return } }(i) } wg.Wait() } 3.0 多通道版端口扫描 package main import ( &#34;fmt&#34; &#34;net&#34; &#34;sort&#34; ) func worker(ports,results chan int){ for p:=range ports{ address :=fmt.]]></description>
 </item>
 </channel>
 </rss>
